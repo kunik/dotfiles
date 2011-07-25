@@ -1,0 +1,34 @@
+# Be 8 bit clean.
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# Auto completion options
+set show-all-if-ambiguous on
+
+## Complete things that have been typed in the wrong case:
+set completion-ignore-case on
+
+## Keep hidden files hidden when doing, for example, cp ~/ Tab
+## cp ~/. Tab will match hidden files
+set match-hidden-files off
+
+# When listing possible file completions, put / after directory names and * after programs
+set visible-stats on
+
+# Keybindings
+"\e[1~": beginning-of-line       # Home key
+"\e[4~": end-of-line             # End key
+"\e[5~": history-search-backward # Page Up
+"\e[6~": history-search-forward  # Page Down
+"\e[3~": delete-char             # Delete key
+"\e[5C": forward-word            # Ctrl+right
+"\e[5D": backward-word           # Ctrl+left
+
+"\e[A": history-search-backward  # Search in hisory with Up/Down
+"\e[B": history-search-forward
+
+# Magic space (for !! expansion)
+$if Bash
+    Space: magic-space
+$endif
