@@ -5,6 +5,10 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# setting vim as default editor
+export EDITOR=vim
+export VISUAL=vim
+
 # prevent from accidental exit
 export IGNOREEOF=1
 
@@ -66,7 +70,11 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
+        PS1='\[\033[01;32m\]@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    else
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    fi
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -102,5 +110,4 @@ fi
 if [ -f /usr/local/etc/bash_completion ] && ! shopt -oq posix; then
     . /usr/local/etc/bash_completion
 fi
-
 
