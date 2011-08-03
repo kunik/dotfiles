@@ -19,4 +19,5 @@ Installation
     ln -s ~/.bash/bash_aliases .bash_aliases
     ln -s ~/.bash/bash_logout .bash_logout
     ln -s ~/.bash/bash_profile .bash_profile
+    ln -s ~/.bash/bash_completion .bash_completion
     ln -s ~/.bash/bashrc .bashrc
