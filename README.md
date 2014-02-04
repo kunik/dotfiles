@@ -21,3 +21,7 @@ Installation
     ln -s ~/.bash/bash_profile .bash_profile
     ln -s ~/.bash/bash_completion .bash_completion
     ln -s ~/.bash/bashrc .bashrc
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kunik/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
